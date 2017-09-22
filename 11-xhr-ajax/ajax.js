@@ -1,29 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
 
-  const getDataEl = document.getElementById('get-data')
+//   const getDataEl = document.getElementById('get-data')
 
-  $.ajax({
-    // info
-  }).then(function() {}).then(function() {})fail(function() {})
+//   $.ajax({
+//     // info
+//   }).then(function() {}).then(function() {})fail(function() {})
 
-  getDataEl.addEventListener('click', function(event) {
-    $.ajax({
-      method: 'GET',
-      url: 'https://dog.ceo/api/breeds/list/all',
-      success: function(data) {
-        const breedNames = Object.keys(data.message)
+//   getDataEl.addEventListener('click', function(event) {
+//     $.ajax({
+//       method: 'GET',
+//       url: 'https://dog.ceo/api/breeds/list/all',
+//       success: function(data) {
+//         const breedNames = Object.keys(data.message)
 
-        breedNames.forEach(function(breedName) {
-          $.ajax({
-            method: 'GET',
-            url: `https://dog.ceo/api/breed/${breedName}/images/random`,
-            success: function(data) {
-              const image = data.message
-              document.body.innerHTML += `<div>${breedName}</div><img src="${image}">`
-            }
-          })
-        })
-      }
-    })
-  })
-})
+//         breedNames.forEach(function(breedName) {
+//           $.ajax({
+//             method: 'GET',
+//             url: `https://dog.ceo/api/breed/${breedName}/images/random`,
+//             success: function(data) {
+//               const image = data.message
+//               document.body.innerHTML += `<div>${breedName}</div><img src="${image}">`
+//             }
+//           })
+//         })
+//       }
+//     })
+//   })
+// })
